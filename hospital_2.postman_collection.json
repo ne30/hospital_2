@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "4e6dc094-2afd-4968-a952-4df76a823f32",
+		"name": "hospital_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/signup/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"email\":\"test2@gmail.com\",\n \"password\":\"123456@test\",\n \"profile\": {\n        \"first_name\": \"test_f\",\n        \"last_name\": \"test_l\"\n }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"email\":\"test2@gmail.com\",\n \"password\":\"123456@test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/pro/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzQ2ZTJjNzctMjY5Yy00ZjlkLWIxNzItMmJlOTEzZjYzYWYwIiwidXNlcm5hbWUiOiJ0ZXN0MkBnbWFpbC5jb20iLCJleHAiOjE2MTI5NDk1MzUsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIn0.ld7idlikBNM3ELxWho59RGLqNfPbMTntBK3uf9vTImU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pro/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pro",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/form/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzQ2ZTJjNzctMjY5Yy00ZjlkLWIxNzItMmJlOTEzZjYzYWYwIiwidXNlcm5hbWUiOiJ0ZXN0MkBnbWFpbC5jb20iLCJleHAiOjE2MTI5NDk1MzUsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIn0.ld7idlikBNM3ELxWho59RGLqNfPbMTntBK3uf9vTImU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"client_user\": \"c5a0fa00-d362-49d5-94b4-d4bcb0d06468\",\n        \"start_date\": \"2021-01-11\",\n        \"arrival_time\": \"19:31:26\",\n        \"departure_time\": \"19:31:27\",\n        \"repeat\": \"none\",\n        \"shift_available\": \"morning shift 5am to 9 am\",\n        \"day\": \"saturday\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/form/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"form",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/form/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNzQ2ZTJjNzctMjY5Yy00ZjlkLWIxNzItMmJlOTEzZjYzYWYwIiwidXNlcm5hbWUiOiJ0ZXN0MkBnbWFpbC5jb20iLCJleHAiOjE2MTI5NDk1MzUsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIn0.ld7idlikBNM3ELxWho59RGLqNfPbMTntBK3uf9vTImU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"client_user\": \"c5a0fa00-d362-49d5-94b4-d4bcb0d06468\",\n        \"start_date\": \"2021-11-11\",\n        \"arrival_time\": \"09:31:26\",\n        \"departure_time\": \"09:31:27\",\n        \"repeat\": \"none\",\n        \"shift_available\": \"morning shift 5am to 9 am\",\n        \"day\": \"saturday\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/form/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"form",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
